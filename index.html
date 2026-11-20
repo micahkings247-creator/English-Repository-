@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="An academic resource and literary analysis platform for English and Literary Studies students.">
+<title>English Repository | Read. Interpret. Understand.</title>
+<style>
+:root{--navy:#10243a;--navy2:#173b59;--gold:#c89b4b;--cream:#f7f5f0;--ink:#1c2935;--muted:#647382;--white:#fff;--line:#e6e9ec;--green:#1f725c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1140px,92%);margin:auto}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #ffffff20}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}.mark{width:38px;height:38px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:21px}.brand small{display:block;color:#b8c7d4;font-size:10px;letter-spacing:.16em;font-weight:600}.links{display:flex;gap:25px;align-items:center;font-size:14px;color:#dce5ec}.links a:hover{color:var(--gold)}.navbtn,.btn{border:0;border-radius:5px;padding:12px 18px;background:var(--gold);color:#172b3c;font-weight:750;cursor:pointer;display:inline-block}.navbtn:hover,.btn:hover{filter:brightness(1.06)}.menu{display:none;background:none;color:white;border:1px solid #ffffff55;padding:7px 10px;border-radius:4px}
+.hero{background:linear-gradient(115deg,#10243a 0%,#173b59 72%,#1b4964 100%);color:white;padding:92px 0 86px;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:440px;height:440px;border:1px solid #ffffff16;border-radius:50%;right:-90px;top:-140px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff05}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:800}.hero h1{font:500 clamp(40px,6vw,68px)/1.08 Georgia,serif;max-width:760px;margin:18px 0}.hero h1 em{color:#e4c58e;font-weight:400}.hero p{max-width:630px;color:#d1dce5;font-size:17px;margin:0 0 28px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn-outline{border:1px solid #ffffff70;border-radius:5px;padding:11px 18px;color:#fff;font-weight:700}.hero-note{margin-top:35px;color:#b8c7d4;font-size:12px;letter-spacing:.04em}
+.section{padding:76px 0}.section.soft{background:var(--cream)}.section-head{max-width:700px;margin-bottom:34px}.section h2{font:500 clamp(30px,4vw,43px)/1.15 Georgia,serif;color:var(--navy);margin:10px 0 12px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:8px;padding:24px;background:#fff}.card .num{color:var(--gold);font:italic 22px Georgia}.card h3{color:var(--navy);margin:10px 0 6px;font-size:18px}.card p{color:var(--muted);font-size:14px;margin:0}.pill{display:inline-block;background:#f4ead8;color:#765521;padding:5px 9px;border-radius:30px;font-size:11px;font-weight:800;letter-spacing:.06em}
+.workspace{background:#fff;border:1px solid var(--line);box-shadow:0 16px 50px #132b3d12;border-radius:10px;overflow:hidden}.worktop{background:var(--navy);padding:22px 26px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px}.worktop h3{margin:0;font:500 25px Georgia}.worktop span{font-size:12px;color:#d2dde5}.workbody{padding:28px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field label{display:block;font-size:12px;font-weight:800;color:var(--navy);margin-bottom:7px}.field input,.field select,.field textarea{width:100%;border:1px solid #d9e0e5;border-radius:5px;padding:12px 13px;font:inherit;color:var(--ink);background:white}.field textarea{min-height:120px;resize:vertical}.full{grid-column:1/-1}.choice-row{display:flex;gap:9px;flex-wrap:wrap}.choice{border:1px solid #d9e0e5;border-radius:5px;padding:9px 12px;font-size:13px;cursor:pointer}.choice input{accent-color:var(--green);margin-right:6px}.notice{margin-top:18px;background:#fff8e9;border-left:3px solid var(--gold);padding:12px 14px;color:#6c5835;font-size:12px}.result{display:none;margin-top:22px;border:1px solid var(--line);border-radius:7px;padding:20px;background:#fbfcfd}.result h4{margin:0 0 6px;color:var(--navy)}.result p{margin:0;color:var(--muted);font-size:14px}.result pre{white-space:pre-wrap;font:13px/1.6 ui-monospace,monospace;background:#f0f3f5;padding:14px;border-radius:5px;overflow:auto}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{border-top:2px solid var(--gold);padding-top:15px}.step b{font:22px Georgia;color:var(--navy)}.step p{font-size:13px;color:var(--muted)}
+.pricing{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:820px}.pricecard{border:1px solid var(--line);border-radius:8px;padding:26px;background:#fff}.pricecard.featured{border:2px solid var(--gold);position:relative}.price{font:38px Georgia;color:var(--navy);margin:12px 0}.price small{font:13px system-ui;color:var(--muted)}.pricecard ul{padding-left:19px;color:var(--muted);font-size:14px}.pricecard li{margin:7px 0}
+.cta{background:var(--navy);color:#fff;padding:52px 0}.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}.cta h2{font:500 34px Georgia;margin:0 0 8px}.cta p{color:#c4d0da;margin:0}
+footer{background:#0b1b2b;color:#b8c7d4;padding:30px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--navy);padding:20px 4%;flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.navbtn{display:none}.hero{padding:68px 0}.grid{grid-template-columns:1fr}.formgrid,.pricing{grid-template-columns:1fr}.full{grid-column:auto}.steps{grid-template-columns:1fr 1fr}.cta-inner{display:block}.cta .btn{margin-top:20px}.workbody{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="brand" href="#"><span class="mark">E</span><span>ENGLISH REPOSITORY<small>READ · INTERPRET · UNDERSTAND</small></span></a>
+ <nav class="links" id="links"><a href="#about">About</a><a href="#library">Academic Library</a><a href="#analyser">Literary Intelligence</a><a href="#membership">Membership</a><a href="#contact">Contact</a></nav>
+ <a class="navbtn" href="#analyser">Explore the platform</a><button class="menu" onclick="document.getElementById('links').classList.toggle('open')">Menu</button>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+ <div class="eyebrow">A learning resource for English students</div>
+ <h1>Read beyond the plot.<br><em>Understand the text.</em></h1>
+ <p>An organised academic resource platform for students of English and Literary Studies. Access learning materials, explore literary works and develop stronger critical reading habits.</p>
+ <div class="hero-actions"><a class="btn" href="#analyser">Explore Literary Intelligence</a><a class="btn-outline" href="#library">Browse the repository</a></div>
+ <div class="hero-note">BUILT FOR SERIOUS READING · CRITICAL THINKING · ACADEMIC GROWTH</div>
+</div></section>
+<section class="section" id="about"><div class="wrap">
+ <div class="section-head"><div class="eyebrow">The idea</div><h2>More than a collection of notes.</h2><p>The repository brings academic resources together in a structured learning environment. Its purpose is not simply to help students collect materials, but to help them understand concepts, interpret literary works and approach university assessments with greater confidence.</p></div>
+ <div class="grid">
+  <article class="card"><span class="num">01</span><h3>Organised learning</h3><p>Course-centred resources that make it easier to locate relevant materials and study systematically.</p></article>
+  <article class="card"><span class="num">02</span><h3>Critical engagement</h3><p>Move beyond plot retelling to examine form, language, context, structure, ideology and meaning.</p></article>
+  <article class="card"><span class="num">03</span><h3>Academic direction</h3><p>Use explanatory resources and examination guidance to strengthen independent learning.</p></article>
+ </div>
+</div></section>
+<section class="section soft" id="library"><div class="wrap">
+ <div class="section-head"><div class="eyebrow">Academic library</div><h2>Find the resource you need.</h2><p>Explore the repository by resource type. The live library can be populated with your approved Telegram materials and course collections.</p></div>
+ <div class="grid">
+  <article class="card"><span class="pill">LITERATURE</span><h3>Literary Texts</h3><p>Summaries, character studies, thematic discussions and critical analyses of prescribed works.</p></article>
+  <article class="card"><span class="pill">COURSE MATERIALS</span><h3>Course Library</h3><p>Organised materials for departmental courses, with clear labels and searchable topics.</p></article>
+  <article class="card"><span class="pill">ASSESSMENT</span><h3>Past Questions</h3><p>Past examination questions, answer guidance and practice resources.</p></article>
+ </div>
+</div></section>
+<section class="section" id="analyser"><div class="wrap">
+ <div class="section-head"><div class="eyebrow">Literary Intelligence</div><h2>A workspace for serious textual study.</h2><p>Choose the kind of literary support you need. This prototype captures the intended workflow; the AI analysis service and verified text library still need to be connected before it can generate dependable literary criticism.</p></div>
+ <div class="workspace">
+  <div class="worktop"><h3>Literary Analysis Workspace</h3><span>Prototype interface · AI not yet connected</span></div>
+  <div class="workbody">
+   <div class="formgrid">
+    <div class="field"><label for="title">TITLE OF LITERARY WORK</label><input id="title" placeholder="e.g. The Lion and the Jewel"></div>
+    <div class="field"><label for="author">AUTHOR (IF KNOWN)</label><input id="author" placeholder="e.g. Wole Soyinka"></div>
+    <div class="field"><label for="genre">GENRE</label><select id="genre"><option>Let the system identify</option><option>Novel</option><option>Drama</option><option>Poetry</option><option>Short story</option><option>Other</option></select></div>
+    <div class="field"><label for="depth">ACADEMIC DEPTH</label><select id="depth"><option>Undergraduate – comprehensive</option><option>Foundational – accessible explanation</option><option>Advanced – critical and theoretical</option></select></div>
+    <div class="field full"><label>WHAT DO YOU WANT TO EXPLORE?</label><div class="choice-row">
+     <label class="choice"><input type="checkbox" value="Comprehensive summary" checked>Summary</label>
+     <label class="choice"><input type="checkbox" value="Close textual analysis" checked>Critical analysis</label>
+     <label class="choice"><input type="checkbox" value="Character analysis">Characters</label>
+     <label class="choice"><input type="checkbox" value="Thematic analysis">Themes</label>
+     <label class="choice"><input type="checkbox" value="Language, form and style">Language and style</label>
+     <label class="choice"><input type="checkbox" value="Historical and authorial context">Context</label>
+     <label class="choice"><input type="checkbox" value="Examination questions and model arguments">Exam preparation</label>
+    </div></div>
+    <div class="field full"><label for="extra">ADDITIONAL INSTRUCTIONS (OPTIONAL)</label><textarea id="extra" placeholder="Mention a prescribed edition, specific chapter/scene/poem, lecturer's requirements, or attach the text in the future full version."></textarea></div>
+   </div>
+   <div class="notice"><strong>Academic integrity:</strong> A reliable analysis must be grounded in the actual literary text. This prototype does not yet generate answers or verify quotations. The production engine must check textual evidence and disclose uncertainty rather than invent details.</div>
+   <button class="btn" style="margin-top:18px" onclick="makeBrief()">Prepare analysis brief</button>
+   <div class="result" id="result"><h4>Your analysis brief</h4><p>This is a structured request preview, not a generated literary analysis.</p><pre id="brief"></pre></div>
+  </div>
+ </div>
+</div></section>
+<section class="section soft"><div class="wrap">
+ <div class="section-head"><div class="eyebrow">How it works</div><h2>A clear path from text to interpretation.</h2></div>
+ <div class="steps">
+  <div class="step"><b>01</b><h3>Identify the work</h3><p>Enter the title, author and genre, or select a work from the approved library.</p></div>
+  <div class="step"><b>02</b><h3>Choose your focus</h3><p>Select summary, close reading, themes, characters, context or examination support.</p></div>
+  <div class="step"><b>03</b><h3>Ground the reading</h3><p>The production system retrieves the text and trusted supporting sources before analysis.</p></div>
+  <div class="step"><b>04</b><h3>Review the analysis</h3><p>Receive structured work with textual evidence, source notes and clear uncertainty flags.</p></div>
+ </div>
+</div></section>
+<section class="section" id="membership"><div class="wrap">
+ <div class="section-head"><div class="eyebrow">Membership</div><h2>Choose your level of access.</h2><p>These cards reflect the current proposed repository model. Online payment and member-only access are not activated in this prototype.</p></div>
+ <div class="pricing">
+  <div class="pricecard"><span class="pill">OPEN ACCESS</span><h3>Free Repository</h3><div class="price">Free</div><ul><li>General academic information</li><li>Introductory learning resources</li><li>Previews of selected materials</li></ul><a class="btn-outline" style="color:var(--navy);border-color:var(--navy)" href="#contact">Enquire about access</a></div>
+  <div class="pricecard featured"><span class="pill">PREMIUM ACCESS</span><h3>Paid Repository</h3><div class="price">₦6,000 <small>/ current stated price</small></div><ul><li>Comprehensive explanatory materials</li><li>Past questions and answer guidance</li><li>Class notes and academic resources</li><li>Examination preparation support</li><li>Relevant Telegram group access</li></ul><a class="btn" href="#contact">Request premium access</a></div>
+ </div>
+</div></section>
+<section class="cta" id="contact"><div class="wrap cta-inner"><div><h2>Make your reading count.</h2><p>For repository enquiries, access information and academic support.</p></div><a class="btn" href="https://t.me/" target="_blank" rel="noopener">Continue to Telegram</a></div></section>
+</main>
+<footer><div class="wrap foot"><div><strong>ENGLISH REPOSITORY</strong><br>Read. Interpret. Understand.</div><div>Academic resource platform · University of Lagos context</div><div>© <span id="year"></span> English Repository</div></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+function makeBrief(){
+ const title=document.getElementById('title').value.trim();
+ const author=document.getElementById('author').value.trim();
+ if(!title){alert('Please enter the title of the literary work.');return;}
+ const tasks=[...document.querySelectorAll('.choice input:checked')].map(x=>x.value);
+ const brief=`WORK: ${title}\nAUTHOR: ${author||'Not supplied'}\nGENRE: ${document.getElementById('genre').value}\nDEPTH: ${document.getElementById('depth').value}\nREQUESTED OUTPUTS:\n- ${tasks.join('\n- ')||'General critical study'}\n\nADDITIONAL INSTRUCTIONS:\n${document.getElementById('extra').value||'None'}\n\nPRODUCTION REQUIREMENTS:\n1. Establish the exact edition and verify the text before making specific claims.\n2. Separate plot facts from interpretation.\n3. Support close readings with accurate, verifiable textual evidence.\n4. Distinguish established facts, published scholarship and original critical interpretation.\n5. Do not invent quotations, page numbers, scenes, characters or references.\n6. Analyse how form, structure, language and context produce meaning.\n7. Use clear, rigorous undergraduate academic English and disclose uncertainty.`;
+ document.getElementById('brief').textContent=brief;
+ document.getElementById('result').style.display='block';
+}
+</script>
+</body></html>
